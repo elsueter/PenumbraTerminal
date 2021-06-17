@@ -1,0 +1,3 @@
+/Users/Elsueter/Documents/JS terminal/build/CMakeFiles/rebuild_cache.dir
+/Users/Elsueter/Documents/JS terminal/build/CMakeFiles/edit_cache.dir
+/Users/Elsueter/Documents/JS terminal/build/CMakeFiles/app.dir
