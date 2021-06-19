@@ -240,6 +240,7 @@
               fetchData(currLine);
               currLine = "";
             }else{
+              term.write("\r\n");
               term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
             }
           }else if(ev.keyCode === 8){
