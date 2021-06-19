@@ -207,9 +207,8 @@
           fontWeight: 'bold',
           fontFamily: 'Courier New',
           });
-
-        var currLine = "";
-        var entries = [];
+        term.open(document.getElementById('terminal'));
+        term.resize(1000, 750);
 
         term.writeSlow = (line, index) => {
           term.write(line.charAt(index));
@@ -228,7 +227,6 @@
           }
         }
 
-        term.open(document.getElementById('terminal'))
         term.writeSlowNR("\x1b[1;32m=====================================================\r\n\x1b[1;34mPENUMBRA OS V 1.0.1.6\r\n\x1b[1;32m=====================================================\r\n\x1b[1;34minitialise . . . . : true\r\n\x1b[1;34mup to date . . . . : true\r\n\r\n\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
 
         term.on("key", function(key, ev){
