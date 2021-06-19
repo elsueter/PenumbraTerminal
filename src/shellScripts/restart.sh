@@ -1,5 +1,5 @@
-pkill -9 app
+pkill -9 penNet
 git pull
 cmake ..
 make
-./app > app.log 2>&1 &
+./penNet > penNet.log 2>&1 &

@@ -1,1 +1,1 @@
-pkill -9 app
+pkill -9 penNet

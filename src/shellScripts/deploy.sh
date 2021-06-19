@@ -1,2 +1,2 @@
 make
-./app > app.log 2>&1 &
+./penNet > penNet.log 2>&1 &
