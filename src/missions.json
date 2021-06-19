@@ -1,8 +1,8 @@
 {
     "product recall" : ["\r\n","\r\n",
-        "\\x1b[1;34m", 
+        "\x1b[1;34m", 
         "SENDER: ", 
-        "\\x1b[1;32m", 
+        "\x1b[1;32m", 
         "WOLF\r\n", 
         "SUBJECT: PRODUCT RECALL (URGENT!)\r\n", 
         "\r\n",
