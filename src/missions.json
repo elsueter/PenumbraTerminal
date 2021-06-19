@@ -1,6 +1,6 @@
 {
     "product recall" : ["\r\n","\r\n",
-        "SENDER: WOLF\r\n", 
+        "\\x1b[1;34mSENDER: \\x1b[1;32mWOLF\r\n", 
         "SUBJECT: PRODUCT RECALL (URGENT!)\r\n", 
         "\r\n",
         "The Arclight Association, an industrial\r\n",
