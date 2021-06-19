@@ -9,5 +9,25 @@
         "blah blah blah blah blah\r\n",
         "blah blah blah blah blah\r\n"],
 
-    "missions" : ["product recall", "some shit", "robo racing"]
+    "robo racing" : ["\r\n","\r\n",
+        "SENDER: Robo Handler\r\n", 
+        "SUBJECT: Ruh Roh\r\n", 
+        "\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n"],
+
+    "another one" : ["\r\n","\r\n",
+        "SENDER: Another one\r\n", 
+        "SUBJECT: AAAAAAAAAAAAA\r\n", 
+        "\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n",
+        "blah blah blah blah blah\r\n"],
+
+    "missions" : ["product recall", "another one", "robo racing"]
 }
