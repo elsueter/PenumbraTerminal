@@ -213,17 +213,17 @@
         term.writeSlow = (line, index) => {
           term.write(line.charAt(index));
           if(index < line.length-1){
-            setTimeout(function(){term.writeSlow(line, index+1)}, 0);
+            setTimeout(function(){term.writeSlow(line, index+1)}, 10);
           }else{
             term.write("\r\n");
-            term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
+            term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 10)
           }
         }
 
         term.writeSlowNR = (line, index) => {
           term.write(line.charAt(index));
           if(index < line.length-1){
-            setTimeout(function(){term.writeSlowNR(line, index+1)}, 0);
+            setTimeout(function(){term.writeSlowNR(line, index+1)}, 10);
           }
         }
 
