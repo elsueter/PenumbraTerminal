@@ -22,6 +22,7 @@ std::string parseFile(std::string query){
             out += "-+-";
         }
         out = out.substr(0, out.length()-1);
+        out += "\r\n";
         out += "| ";
         for(auto &it: x[query]){
             out += it.s();
