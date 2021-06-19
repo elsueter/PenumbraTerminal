@@ -207,8 +207,8 @@
           fontWeight: 'bold',
           fontFamily: 'Courier New',
           });
-        term.open(document.getElementById('terminal'));
         term.resize(120, 50);
+        term.open(document.getElementById('terminal'));
 
         term.writeSlow = (line, index) => {
           term.write(line.charAt(index));
