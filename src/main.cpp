@@ -16,7 +16,7 @@ std::string parseFile(std::string query){
     if(query == "missions"){
         std::string out = "\r\n+-";
         for(auto &it: x[query]){
-            for(auto& it2: it){
+            for(auto& it2: it.s()){
                 out += "-";
             }
             out += "-+-";
@@ -29,7 +29,7 @@ std::string parseFile(std::string query){
         }
         out += "\r\n+-";
         for(auto &it: x[query]){
-            for(auto& it2: it){
+            for(auto& it2: it.s()){
                 out += "-";
             }
             out += "-+-";
