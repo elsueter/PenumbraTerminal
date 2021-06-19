@@ -198,7 +198,9 @@
     </head>
     <body>
       <div class="centre">
-        <div height={height}></div>
+        <div id="terminal"
+          width={500px}
+          height={500px}></div>
       </div>
       <script>
         const term = new Terminal({
@@ -209,17 +211,6 @@
           });
         var currLine = "";
         var entries = [];
-
-        this._xterm.on("resize", size => {
-        if (this.props.onResize)
-          _.defer(() => {
-          this.props.onResize(size.cols, size.rows);
-          });
-        });
-
-        window.addEventListener("resize", this.fit);
-
-        this.fit();
 
         term.writeSlow = (line, index) => {
           term.write(line.charAt(index));
