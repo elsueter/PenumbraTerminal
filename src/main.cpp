@@ -85,8 +85,6 @@ int main(){
         return crow::response(y);
     });
 
-    //app.ssl_file("/etc/letsencrypt/live/elsueter.dev/fullchain.pem");
-
     app.port(18081).multithreaded().run();
 
     return 0;
