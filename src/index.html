@@ -211,6 +211,9 @@
         term.resize(120, 50);
         term.open(document.getElementById('terminal'));
 
+        var currLine = "";
+        var entries = [];
+
         term.writeSlow = (line, index) => {
           term.write(line.charAt(index));
           if(index < line.length-1){
