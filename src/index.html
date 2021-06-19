@@ -239,6 +239,8 @@
               entries.push(currLine);
               fetchData(currLine);
               currLine = "";
+            }else{
+              term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
             }
           }else if(ev.keyCode === 8){
             if(currLine){
