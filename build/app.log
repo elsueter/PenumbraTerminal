@@ -1,8 +1,0 @@
-(2021-06-13 19:24:57) [INFO    ] Crow/0.2 server is running at 0.0.0.0:80 using 4 threads
-(2021-06-13 19:24:57) [INFO    ] Call `app.loglevel(crow::LogLevel::Warning)` to hide Info level logs.
-(2021-06-13 19:25:03) [INFO    ] Request: 127.0.0.1:63818 0x7f88ca80d000 HTTP/1.1 GET /node_modules/xterm/lib/xterm.js
-(2021-06-13 19:25:03) [INFO    ] Response: 0x7f88ca80d000 /node_modules/xterm/lib/xterm.js 404 0
-(2021-06-13 19:25:03) [INFO    ] Response: 0x7f88ca80d000 /node_modules/xterm/lib/xterm.js 404 0
-(2021-06-13 19:25:03) [INFO    ] Request: 127.0.0.1:63819 0x7f88c9011e00 HTTP/1.1 GET /node_modules/xterm/css/xterm.css
-(2021-06-13 19:25:03) [INFO    ] Response: 0x7f88c9011e00 /node_modules/xterm/css/xterm.css 404 0
-(2021-06-13 19:25:03) [INFO    ] Response: 0x7f88c9011e00 /node_modules/xterm/css/xterm.css 404 0

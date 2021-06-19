@@ -37,10 +37,10 @@ include_directories(libs)
 #-----------------------------------------------------------------------------------------
 
 # add the executable
-add_executable(app src/main.cpp)
+add_executable(penNet src/main.cpp)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
-target_link_libraries(app PRIVATE Threads::Threads)
+target_link_libraries(penNet PRIVATE Threads::Threads)
 
 #-----------------------------------------------------------------------------------------
 
