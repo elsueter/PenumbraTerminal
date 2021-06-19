@@ -224,6 +224,9 @@
           term.write(line.charAt(index));
           if(index < line.length-1){
             setTimeout(function(){term.writeSlowNR(line, index+1)}, 10);
+          }else{
+            term.write("\r\n");
+            term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 10)
           }
         }
 
