@@ -14,13 +14,13 @@ std::string parseFile(std::string query){
     crow::json::rvalue x = crow::json::load(content);
 
     if(query == "missions"){
-        std::string out = "\r\n+------------------------------------------+\r\n";
+        std::string out = "\r\n+--------------------------------------------+\r\n";
         out += "| ";
         for(auto &it: x[query]){
             out += it.s();
             out += " | ";
         }
-        out += "\r\n+------------------------------------------+\r\n";
+        out += "\r\n+--------------------------------------------+\r\n";
         return out;
     }else if(x.has(query)){
         std::string out = "";
