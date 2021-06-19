@@ -252,7 +252,7 @@
         function fetchData(line) {
         data = JSON.stringify(line);
 
-        fetch('/fetch', {
+        fetch('penumbraTerminal/fetch', {
                     method: 'POST',
                     body: data,
                 })
