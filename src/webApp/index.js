@@ -38,7 +38,7 @@ term.onKey((key, ev) => {
             currLine = "";
             }else{
             term.write("\r\n");
-            term.writeSlowNR("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
+            term.write("\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ", 0)
         }
     }else if(key.domEvent.code == "Backspace"){
         if(currLine){
@@ -75,7 +75,7 @@ function fetchData(line) {
             .then( myJson =>
             {
                 console.log(myJson);
-                term.writeSlow(myJson.data, 0);
+                term.write(myJson.data, 0);
             } )
             .catch( err =>
             {
