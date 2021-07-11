@@ -10,11 +10,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(Threads)
 find_package(ZLIB)
-find_package(OpenSSL)
-
-if(OPENSSL_FOUND)
-    include_directories(${OPENSSL_INCLUDE_DIR})
-endif()
 
 if (NOT CMAKE_BUILD_TYPE)
     message(STATUS "No build type selected, default to Release")
@@ -44,7 +39,7 @@ target_link_libraries(penNet PRIVATE Threads::Threads)
 
 #-----------------------------------------------------------------------------------------
 
-file(COPY src/index.html DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY src/webApp DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 file(COPY src/shellScripts/deploy.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
@@ -53,3 +48,5 @@ file(COPY src/shellScripts/restart.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY src/shellScripts/kill.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 file(COPY src/missions.json DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+file(COPY src/node_modules DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

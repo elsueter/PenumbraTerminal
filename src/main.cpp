@@ -58,20 +58,36 @@ int main(){
     CROW_ROUTE(app,"/")
     ([]{
         crow::mustache::context ctx;
-        auto page = crow::mustache::load("index.html");
+        auto page = crow::mustache::load("webApp/index.html");
         
         return page.render();
     });
-    
-    //Other route lambda function (to be updated)
-    CROW_ROUTE(app, "/gen")
-    ([]{
-        return crow::response(200);
+
+    CROW_ROUTE(app,"/xtermCSS")
+    ([](const crow::request&, crow::response& res){
+        res.set_static_file_info("node_modules/xterm/css/xterm.css");
+        res.end();
     });
-    
-    CROW_ROUTE(app, "/del")
-    ([]{
-        return crow::response(200);
+    CROW_ROUTE(app,"/xtermJS")
+    ([](const crow::request&, crow::response& res){
+        res.set_static_file_info("node_modules/xterm/lib/xterm.js");
+        res.end();
+    });
+    CROW_ROUTE(app,"/xterm.js.map")
+    ([](const crow::request&, crow::response& res){
+        res.set_static_file_info("node_modules/xterm/lib/xterm.js.map");
+        res.end();
+    });
+
+    CROW_ROUTE(app,"/CSS")
+    ([](const crow::request&, crow::response& res){
+        res.set_static_file_info("webApp/index.css");
+        res.end();
+    });
+    CROW_ROUTE(app,"/JS")
+    ([](const crow::request&, crow::response& res){
+        res.set_static_file_info("webApp/index.js");
+        res.end();
     });
 
     CROW_ROUTE(app, "/fetch")
