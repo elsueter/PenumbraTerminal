@@ -19,6 +19,7 @@ function sleep(ms) {
 }
 
 async function prompt(){
+    printing = true;
     entriesIndex = 0;
     term.write("\r\n");
     line = "\x1b[1;34mPENUMBRA OS \x1b[1;32m$ ";
@@ -99,7 +100,7 @@ function fetchData(line) {
     data = JSON.stringify(line);
     console.log(data);
 
-    fetch('fetch', {
+    fetch('penumbraNetwork/fetch', {
                 method: 'POST',
                 body: data,
             })
