@@ -59,25 +59,27 @@ term.onKey((key, ev) => {
                     }
                     break;
                 case "\u001b[A":
-                    if(entriesIndex != entries.length){
-                        entriesIndex += 1;
+                    if(entries.length > 0){
+                        if(entriesIndex != entries.length){
+                            entriesIndex += 1;
+                        }
+                        for(let i = 0; i < currLine.length; i++){
+                            term.write("\b \b")
+                        }
+                        writeSlow(entries[entries.length-entriesIndex], false);
+                        currLine = entries[entries.length-entriesIndex];
                     }
-                    for(let i = 0; i < currLine.length; i++){
-                        term.write("\b \b")
-                    }
-                    writeSlow(entries[entries.length-entriesIndex], false);
-                    currLine = entries[entries.length-entriesIndex];
                     break;
                 case "\u001b[B":
                     for(let i = 0; i < currLine.length; i++){
                         term.write("\b \b")
                     }
-                    if(entriesIndex != 1){
+                    if(entriesIndex > 1){
                         entriesIndex -= 1;
                         writeSlow(entries[entries.length-entriesIndex], false);
                         currLine = entries[entries.length-entriesIndex];
                     }else{
-                        if(entriesIndex != 0){
+                        if(entriesIndex == 1){
                             entriesIndex -= 1;
                         }
                         currLine = "";
