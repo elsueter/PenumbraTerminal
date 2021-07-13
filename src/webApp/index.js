@@ -38,7 +38,49 @@ async function writeSlow (line, nl){
     printing = false;
 }
 
-writeSlow("\x1b[1;32m================================================================================\r\n\x1b[1;34mPENUMBRA OS V 1.0.1.6\r\n\x1b[1;32m================================================================================\r\n\x1b[1;34minitialise . . . . : true\r\n\x1b[1;34mup to date . . . . : true\r\n", true)
+async function simulateDelay(max){
+    for(let i = 0; i < Math.random()*max; i++){
+        term.write(" .");
+        await sleep(250);
+    }
+}
+
+async function startup(){
+    await writeSlow(
+        "\x1b[1;32m================================================================================" +
+        "\r\n\x1b[1;34mPENUMBRA OS V 1.0.1.6\r\n" +
+        "\x1b[1;32m================================================================================" +
+        "\x1b[1;34m" +
+        "\r\nPenumbraNet Service Started - 'Your portal to the world of the Penumbra'" + 
+        "\r\n"
+        , false)
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Started Authorisation Manager", false);
+    await simulateDelay(2);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Started Network Manager", false);
+    await simulateDelay(2);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Started Disk Manager", false);
+    await simulateDelay(2);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Cleaning Cache", false);
+    await simulateDelay(20);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Covering Tracks", false);
+    await simulateDelay(10);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Loading Latest News", false);
+    await simulateDelay(6);
+
+    await writeSlow("\r\n[ \x1b[1;32mok \x1b[1;34m] Preparing CLI", false);
+    await simulateDelay(20);
+
+    writeSlow("\r\n\r\nInit finished!\r\n", true);
+}
+
+startup();
+
 
 term.onKey((key, ev) => {
     if(!printing){
@@ -127,5 +169,6 @@ function fetchData(line) {
             .catch( err =>
             {
                 console.log( 'Fetch Error :-S', err );
+                writeSlow("\n\rFetch Error: try again", true);
             } );
 }

@@ -16,7 +16,7 @@ std::string parseFile(std::string query){
     if(query == "missions"){
         std::string out = "\r\n+-";
         for(auto &it: x[query]){
-            for(auto& it2: it.s()){
+            for(auto& it2: it[0].s()){
                 out += "-";
             }
             out += "-+-";
@@ -24,12 +24,12 @@ std::string parseFile(std::string query){
         out = out.substr(0, out.length()-1);
         out += "\r\n| ";
         for(auto &it: x[query]){
-            out += it.s();
+            out += it[0].s();
             out += " | ";
         }
         out += "\r\n+-";
         for(auto &it: x[query]){
-            for(auto& it2: it.s()){
+            for(auto& it2: it[0].s()){
                 out += "-";
             }
             out += "-+-";
@@ -43,7 +43,7 @@ std::string parseFile(std::string query){
         }
         return out;
     }
-    return "\r\nNot Found";
+    return "\r\nCommand not found, try 'help' for help";
 }
 
 //Main -----------------------------------------------

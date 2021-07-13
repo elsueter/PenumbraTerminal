@@ -47,5 +47,20 @@
         "known for cuisine and leisure. Many moons and stations. Have fun\r\n",
         "\r\n"],
 
-    "missions" : ["product recall", "robo racing", "Another one"]
+    "missions" : [["product recall"], ["robo racing"], ["Another one"]],
+
+    "help" : ["\r\n","\r\n",
+        "Commands:\r\n",
+        "\r\n",
+        "missions . . . . -> This will print the missions available within the Penumbra\r\n",
+        "<mission title>  -> This will print mission information\r\n",
+        "agents . . . . . -> This will print details of free agents within the Penumbra\r\n",
+        "<agent title> . .-> This will print the agents Bio and details\r\n",
+        "stocks . . . . . -> This will display the different currency values in comparison\r\n",
+        "\r\n",
+        "Constrols: (very basic)\r\n",
+        "\r\n",
+        "Up/Down arrow keys will move through previous commands",
+        "\r\n"
+    ]
 }
